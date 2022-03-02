@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0e8ff;
+  font-family: "Red Hat Display";
+}
+
+h3,
+.outer-container > img,
+.price-section,
+.cta-btn {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 29px;
+  color: #1f2e55;
+  margin: 25px 0;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #717fa6;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.outer-container {
+  width: 327px;
+  height: 567px;
+  background: #ffffff;
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.outer-container > img {
+  border-radius: 20px 20px 0 0;
+}
+
+.content-contianer {
+  padding: 0 30px;
+}
+
+.price-section {
+  display: flex;
+  height: 81px;
+  background: #f7f9ff;
+  border-radius: 11px;
+}
+
+.price-img {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-img > img {
+  width: 60%;
+}
+
+.price-details {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.price-details p {
+  padding: 2px 0;
+}
+
+.price-details p:nth-of-type(1) {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 19px;
+  color: #1f2e55;
+}
+
+.price-details p:nth-of-type(2) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #717fa6;
+}
+
+.price-change {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.price-change > a {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 17px;
+  color: #382ae1;
+}
+
+.cta-btn {
+  display: block;
+  width: 100%;
+  font-family: "Red Hat Display";
+  border: none;
+  background: #382ae1;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+  border-radius: 11px;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+  padding: 15px 0;
+}
+
+.cancel-order {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 20px;
+  color: #717fa6;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    background: #e0e8ff url("images/pattern-background-desktop.svg") no-repeat;
+    background-size: 100%;
+  }
+
+  .outer-container {
+    width: 450px;
+    height: 697px;
+  }
+
+  .content-contianer {
+    padding: 0 55px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 37px;
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .price-section {
+    height: 98px;
+  }
+
+  .price-img > img {
+    width: 50%;
+  }
+
+  .price-details p:nth-of-type(1) {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .price-details p:nth-of-type(2) {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .price-change > a {
+    font-size: 14px;
+    line-height: 19px;
+    transition: 0.4s ease all;
+  }
+
+  .price-change > a:hover {
+    color: #766cf1;
+    text-decoration: none;
+    transition: 0.4s ease all;
+  }
+
+  h1 {
+    margin: 40px 0 30px;
+  }
+  h3,
+  .outer-container > img,
+  .price-section {
+    margin-bottom: 30px;
+  }
+
+  .cta-btn {
+    margin-bottom: 25px;
+    transition: 0.4s ease all;
+  }
+
+  .cta-btn:hover {
+    background: #766cf1;
+    transition: 0.4s ease all;
+    cursor: pointer;
+  }
+
+  .cancel-order {
+    transition: 0.4s ease all;
+  }
+
+  .cancel-order:hover {
+    color: #1f2e55;
+    transition: 0.4s ease all;
+  }
+}
