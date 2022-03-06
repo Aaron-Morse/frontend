@@ -48,7 +48,7 @@ p {
 
 .panel-container {
   width: 90%;
-  height: 63%;
+  height: 67%;
   background-color: #fff;
   border-radius: 25px;
   position: relative;
@@ -133,6 +133,7 @@ p {
     display: flex;
     height: 50%;
     width: 80%;
+    height: 55%;
   }
 
   .img-container {
@@ -160,7 +161,7 @@ p {
   .panel-container > img {
     display: block;
     position: absolute;
-    top: 39%;
+    top: 36%;
     left: -12%;
     transform: scale(0.8);
   }
