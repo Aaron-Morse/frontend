@@ -60,7 +60,7 @@ p {
 .img-container img:nth-of-type(1) {
   width: 70%;
   position: absolute;
-  top: -19%;
+  top: -17%;
   left: 15%;
 }
 
@@ -132,7 +132,7 @@ p {
   .panel-container {
     display: flex;
     height: 50%;
-    width: 80%;
+    width: 90%;
     height: 55%;
   }
 
@@ -145,24 +145,23 @@ p {
   .img-container img:nth-of-type(3) {
     display: block;
     position: absolute;
-    top: -65%;
-    left: -140%;
-    transform: scale(0.85);
+    top: -55%;
+    left: -130%;
   }
 
   .img-container img:nth-of-type(4) {
     display: block;
     position: absolute;
-    top: 9%;
-    left: -26%;
-    transform: scale(0.8);
+    top: 15%;
+    left: -20%;
+    transform: scale(0.9);
   }
 
   .panel-container > img {
     display: block;
     position: absolute;
-    top: 36%;
-    left: -12%;
+    top: 42%;
+    left: -11%;
     transform: scale(0.8);
   }
 
