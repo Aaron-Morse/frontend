@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  /* Primary  */
+  --strong-cyan: hsl(172, 67%, 45%);
+  /* Neutral */
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--light-grayish-cyan);
+}
+
+body,
+input,
+button {
+  font-family: "Space Mono";
+}
+
+header {
+  padding: 40px 0;
+  text-align: center;
+}
+
+label {
+  display: block;
+  color: var(--dark-grayish-cyan);
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  border: none;
+  text-align: right;
+  font-size: 24px;
+  color: var(--very-dark-cyan);
+}
+
+input[type="text"]#bill,
+input[type="text"]#people {
+  width: 100%;
+  border-radius: 5px;
+  padding: 6px 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="text"]#bill:focus,
+input[type="text"]#people:focus {
+  padding: 4px 15px;
+  border: 2px solid var(--strong-cyan);
+}
+
+input[type="text"]#bill {
+  background: var(--very-light-grayish-cyan) url("images/icon-dollar.svg") left
+    no-repeat;
+  background-position: 5% 50%;
+  margin-bottom: 30px;
+}
+
+input[type="text"]#people {
+  background: var(--very-light-grayish-cyan) url("images/icon-person.svg") left
+    no-repeat;
+  background-position: 5% 50%;
+  margin-bottom: 10px;
+}
+
+input#custom-tip {
+  background-color: var(--very-light-grayish-cyan);
+  padding-right: 15px;
+  outline: none;
+}
+
+input#custom-tip:focus {
+  padding: 3px;
+  border: 2px solid var(--strong-cyan);
+}
+
+input#custom-tip::placeholder {
+  padding-right: 10px;
+}
+
+button {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--very-dark-cyan);
+  background: var(--strong-cyan);
+  border-radius: 5px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.outer-container {
+  width: 375px;
+  height: 100vh;
+  margin: auto;
+}
+
+.panel-container {
+  width: 100%;
+  height: 85vh; /* This may need to be changed */
+  background: var(--white);
+  border-radius: 25px 25px 0 0;
+}
+
+.input-container,
+.output-container {
+  padding: 20px;
+}
+
+.tip-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.tip-percentage {
+  width: 47.5%;
+  text-align: center;
+  background: var(--very-dark-cyan);
+  color: var(--white);
+  margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+  font-size: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+.tip-percentage-highlight {
+  background: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  transition: 0.3s ease all;
+}
+
+.output-section {
+  width: 100%;
+  height: 250px;
+  margin: auto;
+  background: var(--very-dark-cyan);
+  border-radius: 15px;
+  padding: 30px 20px 20px;
+}
+
+.tip-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tip-detail p:nth-of-type(1) {
+  color: var(--white);
+}
+
+.tip-detail p:nth-of-type(2) {
+  color: var(--light-grayish-cyan);
+  font-size: 12px;
+}
+
+.total {
+  color: var(--strong-cyan);
+  font-size: 38px;
+}
+
+.warning-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.warning-msg {
+  color: crimson;
+  display: none;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  input#custom-tip {
+    padding-right: 10px;
+  }
+
+  button {
+    margin-top: 140px;
+  }
+
+  .outer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .panel-container {
+    width: 800px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+  }
+
+  .input-container,
+  .output-container {
+    width: 50%;
+  }
+
+  .output-container,
+  .output-section {
+    height: 100%;
+  }
+
+  .tip-percentage {
+    width: 30%;
+    font-size: 20px;
+  }
+}

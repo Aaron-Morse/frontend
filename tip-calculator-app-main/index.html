@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="outer-container">
+      <header>
+        <img src="images/logo.svg" />
+      </header>
+      <div class="panel-container">
+        <div class="input-container">
+          <label for="bill">Bill</label>
+          <input type="text" name="bill" id="bill" placeholder="0" />
+          <label>Select Tip %</label>
+          <div class="tip-section">
+            <input
+              class="tip-percentage"
+              type="button"
+              value="5%"
+              data-percent="0.05"
+            />
+            <input
+              class="tip-percentage"
+              type="button"
+              value="10%"
+              data-percent="0.1"
+            />
+            <input
+              class="tip-percentage"
+              type="button"
+              value="15%"
+              data-percent="0.15"
+            />
+            <input
+              class="tip-percentage"
+              type="button"
+              value="25%"
+              data-percent="0.25"
+            />
+            <input
+              class="tip-percentage"
+              type="button"
+              value="50%"
+              data-percent="0.5"
+            />
+            <input
+              class="tip-percentage"
+              type="text"
+              name="custom-tip"
+              id="custom-tip"
+              placeholder="Custom"
+            />
+          </div>
+          <div class="warning-section">
+            <label for="people">Number of People</label>
+            <p class="warning-msg">Can't be zero</p>
+          </div>
+          <input type="text" name="people" id="people" placeholder="0" />
+        </div>
+        <div class="output-container">
+          <div class="output-section">
+            <div class="tip-details">
+              <div class="tip-detail">
+                <p>Tip Amount</p>
+                <p>/ person</p>
+              </div>
+              <div class="total">$0</div>
+            </div>
+            <div class="tip-details">
+              <div class="tip-detail">
+                <p>Total</p>
+                <p>/ person</p>
+              </div>
+              <div class="total">$0</div>
+            </div>
+            <button>reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
