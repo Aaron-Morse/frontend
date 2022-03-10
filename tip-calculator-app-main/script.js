@@ -1,4 +1,4 @@
-// Varialbes
+// Variables
 const billInput = document.querySelector('input#bill');
 const tipSection = document.querySelector('.tip-section');
 const tipInputs = document.querySelectorAll('.tip-percentage');
