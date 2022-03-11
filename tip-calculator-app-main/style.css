@@ -111,13 +111,13 @@ button {
 
 .outer-container {
   width: 375px;
-  height: 100vh;
+  height: 100%;
   margin: auto;
 }
 
 .panel-container {
   width: 100%;
-  height: 85vh; /* This may need to be changed */
+  height: 100%; /* This may need to be changed */
   background: var(--white);
   border-radius: 25px 25px 0 0;
 }
