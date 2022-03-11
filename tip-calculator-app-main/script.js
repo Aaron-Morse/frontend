@@ -68,8 +68,7 @@ customTip.addEventListener('blur', () => {
     notification();
 });
 
-
-peopleInput.addEventListener('blur', () => { // On blur event the value of the people input is stored in the people variable
+peopleInput.addEventListener('keyup', () => { // On blur event the value of the people input is stored in the people variable
     people = Number(peopleInput.value);
     calculateTotals();
     notification();
