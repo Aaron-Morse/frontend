@@ -39,15 +39,15 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"] {
+input[type="number"] {
   border: none;
   text-align: right;
   font-size: 24px;
   color: var(--very-dark-cyan);
 }
 
-input[type="text"]#bill,
-input[type="text"]#people {
+input[type="number"]#bill,
+input[type="number"]#people {
   width: 100%;
   border-radius: 5px;
   padding: 6px 15px;
@@ -55,20 +55,20 @@ input[type="text"]#people {
   cursor: pointer;
 }
 
-input[type="text"]#bill:focus,
-input[type="text"]#people:focus {
+input[type="number"]#bill:focus,
+input[type="number"]#people:focus {
   padding: 4px 15px;
   border: 2px solid var(--strong-cyan);
 }
 
-input[type="text"]#bill {
+input[type="number"]#bill {
   background: var(--very-light-grayish-cyan) url("images/icon-dollar.svg") left
     no-repeat;
   background-position: 5% 50%;
   margin-bottom: 30px;
 }
 
-input[type="text"]#people {
+input[type="number"]#people {
   background: var(--very-light-grayish-cyan) url("images/icon-person.svg") left
     no-repeat;
   background-position: 5% 50%;
@@ -88,6 +88,11 @@ input#custom-tip:focus {
 
 input#custom-tip::placeholder {
   padding-right: 10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 button {

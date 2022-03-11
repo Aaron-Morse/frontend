@@ -84,6 +84,7 @@ resetButton.addEventListener('click', () => { // Resets all values back to defau
     tipInputs.forEach(input => {
         input.classList.remove('tip-percentage-highlight');
     });
+    notification();
 });
 
 
