@@ -129,11 +129,12 @@ a {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: var(--red) url("images/bg-intro-desktop.png");
   }
 
   header {
     text-align: left;
-    padding: 0;
+    padding: 0 20px 0 0;
   }
 
   h1 {
@@ -155,7 +156,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 1025px;
   }
 
   header,
