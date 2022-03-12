@@ -73,9 +73,9 @@ input {
   margin-bottom: 20px;
   padding: 15px;
   font-family: Poppins;
+  font-weight: 600;
   border-radius: 5px;
   border: 1px solid lightgrey;
-  font-weight: 600;
 }
 
 input[type="button"] {
@@ -85,7 +85,7 @@ input[type="button"] {
   text-transform: uppercase;
   color: white;
   box-shadow: 0 3px var(--dark-blue-alpha);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 a {
@@ -118,7 +118,9 @@ a {
 
 .terms-services > p {
   color: lightgrey;
-  font-size: 0.8em;
+  font-weight: 500;
+  font-size: 0.7em;
+  line-height: 1.5em;
 }
 
 @media only screen and (min-width: 1200px) {
