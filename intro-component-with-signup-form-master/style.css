@@ -9,7 +9,13 @@
   --blue: hsl(248, 32%, 49%);
 
   /* Neutral */
-  --dark-blue: hsla(249, 10%, 26%, 0.3);
+  --dark-blue: hsl(249, 10%, 26%);
+  --dark-blue-alpha: hsla(
+    249,
+    10%,
+    26%,
+    0.3
+  ); /* Used for border shadows on containers */
 }
 
 * {
@@ -20,7 +26,7 @@
 
 body {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   font-size: 16px;
   font-family: Poppins;
   background: var(--red) url("images/bg-intro-mobile.png");
@@ -58,7 +64,7 @@ form {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 6px var(--dark-blue);
+  box-shadow: 0 6px var(--dark-blue-alpha);
 }
 
 input {
@@ -78,7 +84,7 @@ input[type="button"] {
   font-size: 1em;
   text-transform: uppercase;
   color: white;
-  box-shadow: 0 3px var(--dark-blue);
+  box-shadow: 0 3px var(--dark-blue-alpha);
   margin-bottom: 10px;
 }
 
@@ -100,7 +106,7 @@ a {
   background-color: var(--blue);
   padding: 20px 50px;
   border-radius: 10px;
-  box-shadow: 0 6px var(--dark-blue);
+  box-shadow: 0 6px var(--dark-blue-alpha);
   margin-bottom: 20px;
 }
 
@@ -113,4 +119,73 @@ a {
 .terms-services > p {
   color: lightgrey;
   font-size: 0.8em;
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  header {
+    text-align: left;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.1em;
+  }
+
+  form {
+    margin: 0;
+    width: 100%;
+    padding: 30px;
+  }
+
+  input {
+    cursor: pointer;
+  }
+
+  .outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
+
+  header,
+  .offer-container {
+    width: 50%;
+  }
+
+  .offer-content {
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 15px;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+    border: 1px solid var(--dark-blue);
+  }
+
+  input[type="button"] {
+    padding: 10px;
+    font-size: 0.9em;
+    transition: 0.3s ease all;
+  }
+
+  input[type="button"]:hover {
+    opacity: 0.8;
+    transition: 0.3s ease all;
+  }
+
+  .terms-services > p {
+    font-size: 0.7em;
+  }
 }
