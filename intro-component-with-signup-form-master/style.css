@@ -78,7 +78,7 @@ input {
   border: 1px solid lightgrey;
 }
 
-input[type="button"] {
+input[type="submit"] {
   background-color: var(--green);
   border: none;
   font-size: 1em;
@@ -110,6 +110,14 @@ a {
   margin-bottom: 20px;
 }
 
+.form-inputs {
+  text-align: right;
+}
+
+.form-inputs:nth-of-type(3) {
+  position: relative;
+}
+
 .terms-services {
   width: 100%;
   text-align: center;
@@ -121,6 +129,30 @@ a {
   font-weight: 500;
   font-size: 0.7em;
   line-height: 1.5em;
+}
+
+.warning-msg {
+  /* This class is to style the warning message p that will display below the input field */
+  color: var(--red);
+  font-size: 0.65em;
+  font-style: italic;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  padding-right: 5px;
+}
+
+.error {
+  border: 2px solid var(--red);
+  background: url(images/icon-error.svg) no-repeat 95% 50%/ 20px 20px;
+}
+
+#email-msg {
+  color: var(--red);
+  font-size: 0.8em;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  display: none;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -177,13 +209,13 @@ a {
     border: 1px solid var(--dark-blue);
   }
 
-  input[type="button"] {
+  input[type="submit"] {
     padding: 10px;
     font-size: 0.9em;
     transition: 0.3s ease all;
   }
 
-  input[type="button"]:hover {
+  input[type="submit"]:hover {
     opacity: 0.8;
     transition: 0.3s ease all;
   }
