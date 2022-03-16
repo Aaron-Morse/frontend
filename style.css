@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0c1c;
+}
+
+img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.75em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 0.9375em;
+  font-weight: 400;
+  line-height: 1.67em;
+  color: #ffffff;
+  opacity: 0.75;
+  margin-bottom: 45px;
+}
+
+span.highlight {
+  color: #ab5cdb;
+}
+
+.outer-container {
+  max-width: 327px;
+  /* height: 780px; */
+  background: #1b1937;
+  box-shadow: 0px 20px 20px -10px rgba(23, 25, 41, 0.203087);
+  border-radius: 8px;
+}
+
+.content-container {
+  padding: 25px 30px;
+  font-family: Inter;
+  text-align: center;
+}
+
+.stat {
+  margin-bottom: 15px;
+}
+
+.stat p {
+  margin-bottom: 5px;
+}
+
+.stat p:nth-of-type(1) {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+.stat p:nth-of-type(2) {
+  font-family: "Lexend Deca";
+  font-size: 0.75em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 2.25em;
+  }
+
+  img {
+    content: url("images/image-header-desktop.jpg");
+    border-radius: 0 8px 8px 0;
+  }
+
+  .outer-container {
+    max-width: 1110px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .content-container {
+    padding: 80px 115px 20px 70px;
+    text-align: left;
+  }
+
+  .stats-container {
+    display: flex;
+  }
+
+  .stat {
+    width: 33%;
+    justify-content: space-between;
+  }
+
+  .stat:nth-of-type(2) {
+    padding-left: 20px;
+  }
+
+  .stat:nth-of-type(3) {
+    padding-left: 30px;
+  }
+}
