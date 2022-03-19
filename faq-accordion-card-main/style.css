@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(
     180deg,
-    hsl(273, 75%, 66%) 50%,
+    hsl(273, 75%, 66%) 35%,
     hsl(240, 73%, 65%) 100%
   );
 }
@@ -50,7 +50,7 @@ p {
 
 .panel-container {
   width: 90%;
-  height: 55%;
+  height: 65%;
   background-color: #fff;
   border-radius: 25px;
   position: relative;
@@ -132,7 +132,7 @@ p {
 
   .panel-container {
     display: flex;
-    height: 45%;
+    height: 60%;
   }
 
   .img-container {
@@ -145,7 +145,7 @@ p {
     display: block;
     position: absolute;
     top: -60%;
-    left: -130%;
+    left: -135%;
   }
 
   .img-container img:nth-of-type(4) {
@@ -159,7 +159,7 @@ p {
   .panel-container > img {
     display: block;
     position: absolute;
-    top: 43%;
+    top: 40%;
     left: -10.5%;
     transform: scale(0.8);
   }
