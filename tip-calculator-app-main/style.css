@@ -42,7 +42,7 @@ label {
 input[type="number"] {
   border: none;
   text-align: right;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: var(--very-dark-cyan);
 }
 
@@ -100,7 +100,7 @@ button {
   border: none;
   padding: 10px;
   margin-top: 15px;
-  font-size: 20px;
+  font-size: 1.33rem;
   text-transform: uppercase;
   color: var(--very-dark-cyan);
   background: var(--strong-cyan);
@@ -110,7 +110,7 @@ button {
 }
 
 .outer-container {
-  width: 375px;
+  max-width: 375px;
   height: 100vh;
   margin: auto;
 }
@@ -143,7 +143,7 @@ button {
   margin-bottom: 10px;
   padding: 5px;
   border: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s ease all;
@@ -177,12 +177,12 @@ button {
 
 .tip-detail p:nth-of-type(2) {
   color: var(--light-grayish-cyan);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .total {
   color: var(--strong-cyan);
-  font-size: 38px;
+  font-size: 2.375rem;
 }
 
 .warning-section {
@@ -233,6 +233,6 @@ button {
 
   .tip-percentage {
     width: 30%;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
