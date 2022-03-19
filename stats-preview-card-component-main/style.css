@@ -74,7 +74,7 @@ span.highlight {
 }
 
 .stat {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .stat p {
@@ -104,10 +104,6 @@ span.highlight {
   h1 {
     font-size: 2.25rem;
   }
-
-  /* h2 {
-    margin-bottom: 60px;
-  } */
 
   .outer-container {
     max-width: 1110px;
