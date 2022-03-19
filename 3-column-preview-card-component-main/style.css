@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 
+:root {
+  /* Primary colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral colors */
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+  --very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +21,7 @@
 body {
   min-width: 100%;
   min-height: 100vh;
+  background: var(--very-light-gray);
 }
 
 img,
@@ -23,7 +35,7 @@ h1 {
   font-weight: 700;
   font-size: 2.5rem;
   text-transform: uppercase;
-  color: #f2f2f2;
+  color: var(--very-light-gray);
 }
 
 p,
@@ -34,7 +46,7 @@ button {
 }
 
 p {
-  color: #ffffff;
+  color: var(--transparent-white);
   opacity: 0.75;
 }
 
@@ -42,7 +54,7 @@ button {
   border: none;
   padding: 10px 30px;
   border-radius: 25px;
-  background-color: #f2f2f2;
+  background-color: var(--very-light-gray);
 }
 
 .panel-container {
@@ -57,27 +69,36 @@ button {
 }
 
 .panel:nth-of-type(1) {
-  background-color: #e28625;
+  background-color: var(--bright-orange);
 }
 
 .panel:nth-of-type(1) button {
-  color: #e28625;
+  color: var(--bright-orange);
 }
 
 .panel:nth-of-type(2) {
-  background-color: #006971;
+  background-color: var(--dark-cyan);
 }
 
 .panel:nth-of-type(2) button {
-  color: #006971;
+  color: var(--dark-cyan);
 }
 
 .panel:nth-of-type(3) {
-  background-color: #004140;
+  background-color: var(--very-dark-cyan);
 }
 
 .panel:nth-of-type(3) button {
-  color: #004140;
+  color: var(--very-dark-cyan);
+}
+
+.panel button:hover {
+  cursor: pointer;
+  background-color: inherit;
+  padding: 8px 28px;
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+  color: var(--very-light-gray);
 }
 
 @media only screen and (min-width: 992px) {
@@ -98,14 +119,6 @@ button {
 
   .panel {
     width: 33.33%;
-  }
-
-  .panel button:hover {
-    cursor: pointer;
-    background-color: inherit;
-    padding: 8px 28px;
-    color: #fff;
-    border: 2px solid #fff;
-    color: #fff;
+    padding: 50px;
   }
 }
