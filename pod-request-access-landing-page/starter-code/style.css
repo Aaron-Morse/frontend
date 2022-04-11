@@ -1,0 +1,184 @@
+:root {
+  --soft-cyan: #54e6af;
+  --very-dark-desaturated-blue: #2c344b;
+  --very-dark-blue: #121725;
+  --white: #ffffff;
+  --mostly-desaturated-dark-blue: #5a668a;
+  --light-grayish-blue: #c2cbe5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  font-family: Chivo;
+  background-color: var(--very-dark-blue);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  padding: 4rem 0;
+  background: linear-gradient(rgba(18, 23, 37, 0.925), rgba(18, 23, 37, 0.925)),
+    url("./assets/mobile/image-host.jpg") top center / cover no-repeat;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.625rem;
+  line-height: 1.46;
+  font-weight: 300;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+h1 > span {
+  color: var(--soft-cyan);
+}
+
+p {
+  text-align: center;
+  font-size: 0.938rem;
+  line-height: 1.67;
+  color: var(--light-grayish-blue);
+  margin-bottom: 2rem;
+  opacity: 0.6;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: auto;
+  border: none;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 1.75rem;
+}
+
+/* Email input */
+input:nth-of-type(1) {
+  background-color: var(--very-dark-desaturated-blue);
+  margin-bottom: 1rem;
+}
+
+input:nth-of-type(1)::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  padding-left: 1rem;
+}
+
+/* Submit input */
+input:nth-of-type(2) {
+  background-color: var(--soft-cyan);
+  color: var(--very-dark-blue);
+}
+
+.content-container {
+  width: 90%;
+  margin: auto;
+}
+
+/* SVG container */
+.image-container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container > img {
+  width: 25%;
+  transform: scale(0.7);
+  opacity: 0.6;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 2rem 0 0 2rem;
+    background: url("./assets/tablet/image-host.jpg") top right/ 60% no-repeat,
+      url("./assets/desktop/bg-pattern-dots.svg") bottom left no-repeat
+        content-box;
+  }
+
+  header,
+  h1,
+  p {
+    text-align: left;
+  }
+
+  header {
+    margin-bottom: 9.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1.17;
+  }
+
+  p {
+    font-size: 1.125rem;
+    width: 70%;
+    margin-bottom: 2.5rem;
+  }
+
+  form {
+    position: relative;
+  }
+
+  input {
+    width: 70%;
+    margin: 0;
+    padding: 1.25rem;
+    font-size: 0.938rem;
+  }
+
+  /* Email input */
+  input:nth-of-type(1) {
+    margin-bottom: 3rem;
+  }
+
+  /* Submit input */
+  input:nth-of-type(2) {
+    width: 25%;
+    padding: 0.85rem;
+    border-radius: 1.75rem;
+    position: absolute;
+    top: 6%;
+    right: 30.75%;
+  }
+
+  .content-container {
+    width: 88%;
+    margin: 0;
+    padding-top: 3rem;
+    background-color: var(--very-dark-blue);
+    z-index: 1;
+  }
+
+  .bottom-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .image-container {
+    width: 90%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
