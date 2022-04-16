@@ -67,12 +67,14 @@ input {
   font-size: 0.875rem;
   font-weight: 700;
   border-radius: 1.75rem;
+  cursor: pointer;
 }
 
 /* Email input */
 input:nth-of-type(1) {
   background-color: var(--very-dark-desaturated-blue);
   margin-bottom: 1rem;
+  color: var(--white);
 }
 
 input:nth-of-type(1)::placeholder {
@@ -84,6 +86,7 @@ input:nth-of-type(1)::placeholder {
 input:nth-of-type(2) {
   background-color: var(--soft-cyan);
   color: var(--very-dark-blue);
+  box-shadow: 0px 25px 20px -20px #54e6af7f;
 }
 
 .content-container {
@@ -181,4 +184,50 @@ input:nth-of-type(2) {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  main {
+    width: 90%;
+    height: 61vh;
+    margin: 0;
+    padding: 0;
+    background: url("./assets/desktop/bg-pattern-dots.svg") bottom right
+        no-repeat,
+      url("./assets/desktop/image-host.jpg") 100% no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  header {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 3.25rem;
+    line-height: 1.19;
+  }
+
+  p {
+    width: 60%;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .content-container {
+    width: 58%;
+    padding-top: 4rem;
+  }
+
+  .image-container {
+    width: 85%;
+    margin-left: -1rem;
+  }
 }
