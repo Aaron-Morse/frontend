@@ -122,6 +122,10 @@ input:nth-of-type(2) {
   display: none;
 }
 
+#desktop-img {
+  display: none;
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   main {
@@ -207,24 +211,27 @@ input:nth-of-type(2) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
   }
 
   main {
     width: 90%;
-    height: 61vh;
+    height: 69vh;
     margin: 0;
     padding: 0;
-    background: url("./assets/desktop/bg-pattern-dots.svg") bottom right
-        no-repeat,
-      url("./assets/desktop/image-host.jpg") 100% no-repeat;
+    background: url("./assets/desktop/image-host.jpg") 100% no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   header {
-    margin-top: 1rem;
     margin-bottom: 0;
+  }
+
+  header > img {
+    position: relative;
+    bottom: 1.5rem;
   }
 
   h1 {
@@ -242,15 +249,24 @@ input:nth-of-type(2) {
 
   .content-container {
     width: 58%;
-    padding-top: 4rem;
+    height: 80%;
+    padding-top: 5rem;
   }
 
   .image-container {
-    width: 85%;
+    width: 75%;
     margin-left: -1rem;
+    margin-bottom: 0;
   }
 
   input:nth-of-type(2):hover {
     background-color: var(--white);
+  }
+
+  #desktop-img {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
   }
 }
