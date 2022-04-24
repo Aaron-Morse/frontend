@@ -1,0 +1,164 @@
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  font-family: Epilogue;
+  background-color: var(--Almost-White);
+}
+
+header {
+  margin: 1.5rem 0;
+}
+
+div.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+/* Mobile naviation section */
+div#mobile-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 35%;
+  height: 100vh;
+  background-color: hsla(0, 0%, 8%, 0.7);
+}
+
+nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: var(--Almost-White);
+  width: 65%;
+  height: 100vh;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+img#mobile-nav-close-btn {
+  display: block;
+  position: relative;
+  left: 80%;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 0.75rem 0;
+  color: var(--Medium-Gray);
+}
+
+li#features > img,
+li#company > img {
+  margin-left: 0.5rem;
+}
+
+li#features ul,
+li#company ul {
+  display: none;
+}
+
+img.chevron {
+  transform: rotate(180deg);
+}
+
+li#features li {
+  margin-left: 2rem;
+  padding-left: 0.5rem;
+}
+
+li#todo-list {
+  list-style-image: url("./images/icon-todo.svg");
+  margin-top: 1rem;
+}
+
+li#calendar {
+  list-style-image: url("./images/icon-calendar.svg");
+}
+
+li#reminders {
+  list-style-image: url("./images/icon-reminders.svg");
+}
+
+li#planning {
+  list-style-image: url("./images/icon-planning.svg");
+}
+
+li#company li {
+  margin-left: 1rem;
+}
+
+li#company ul {
+  margin-top: 1rem;
+}
+/* End of mobile naviation section */
+
+main {
+  text-align: center;
+}
+
+main > img {
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--Almost-Black);
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 0.938rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--Medium-Gray);
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  color: var(--Almost-White);
+  background-color: var(--Almost-Black);
+  font-family: inherit;
+  font-size: 0.938rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+div.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.image-container img {
+  width: 25%;
+  transform: scale(0.7);
+}
