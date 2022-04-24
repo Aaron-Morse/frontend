@@ -21,6 +21,10 @@ header {
   margin: 1.5rem 0;
 }
 
+header img {
+  cursor: pointer;
+}
+
 div.mobile-header {
   display: flex;
   justify-content: space-between;
@@ -53,11 +57,16 @@ nav {
   padding-left: 1.5rem;
 }
 
+nav > img {
+  cursor: pointer;
+}
+
 img#mobile-nav-close-btn {
   display: block;
   position: relative;
   left: 80%;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 ul {
@@ -67,6 +76,7 @@ ul {
 li {
   padding: 0.75rem 0;
   color: var(--Medium-Gray);
+  cursor: pointer;
 }
 
 li#features > img,
