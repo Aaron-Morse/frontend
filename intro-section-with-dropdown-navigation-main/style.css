@@ -34,18 +34,18 @@ div.mobile-header {
 
 /* Mobile naviation section */
 div#mobile-overlay {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
   width: 35%;
   height: 100vh;
-  background-color: hsla(0, 0%, 8%, 0.7);
+  background-color: hsla(0, 0%, 8%, 0.8);
 }
 
 nav {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 0;
   right: 0;
@@ -122,6 +122,27 @@ li#company li {
 li#company ul {
   margin-top: 1rem;
 }
+
+div.nav-bottom-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+}
+
+div.nav-bottom-section button {
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  color: var(--Medium-Gray);
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+}
+
+div.nav-bottom-section button:nth-of-type(2) {
+  border: 2px solid var(--Medium-Gray);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+}
 /* End of mobile naviation section */
 
 main {
@@ -150,7 +171,7 @@ p {
   margin-bottom: 2rem;
 }
 
-button {
+main button {
   color: var(--Almost-White);
   background-color: var(--Almost-Black);
   font-family: inherit;

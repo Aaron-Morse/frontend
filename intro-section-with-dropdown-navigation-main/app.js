@@ -22,20 +22,24 @@ function mobileMenuItemsToggle(input) {
     } else {
         input.style.display = 'none';
         input.previousElementSibling.style.transform = 'rotate(180deg)';
-    }
+    } 
+}
+
+function mobileMenuItemsClose(input) {
+    input.style.display = 'none';
+    input.previousElementSibling.style.transform = 'rotate(180deg)';
 }
 
 // Event listeners
 mobileNavBtn.addEventListener('click', (event) => mobileMenuToggle(event.target));
 
-mobileNavCloseBtn.addEventListener('click', (event) => mobileMenuToggle(event.target));
-
-featuresDropdown.addEventListener('click', (event) => {
-    const ul = featuresDropdown.querySelector('ul');
-    mobileMenuItemsToggle(ul);
+mobileNavCloseBtn.addEventListener('click', (event) => {
+    mobileMenuToggle(event.target);
+    // Closing out the features and company sections
+    mobileMenuItemsClose(featuresDropdown.querySelector('ul'));
+    mobileMenuItemsClose(companyDropdown.querySelector('ul'));
 });
 
-companyDropdown.addEventListener('click', (event) => {
-    const ul = companyDropdown.querySelector('ul');
-    mobileMenuItemsToggle(ul);
-});
+featuresDropdown.addEventListener('click', (event) => mobileMenuItemsToggle(featuresDropdown.querySelector('ul')));
+
+companyDropdown.addEventListener('click', (event) => mobileMenuItemsToggle(companyDropdown.querySelector('ul')));
