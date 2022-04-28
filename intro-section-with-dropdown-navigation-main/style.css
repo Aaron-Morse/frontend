@@ -19,17 +19,14 @@ body {
 
 header {
   margin: 1.5rem 0;
-}
-
-header img {
-  cursor: pointer;
-}
-
-div.mobile-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+}
+
+header img {
+  cursor: pointer;
 }
 
 /* Mobile naviation section */
@@ -192,4 +189,8 @@ div.image-container {
 div.image-container img {
   width: 25%;
   transform: scale(0.7);
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
 }
