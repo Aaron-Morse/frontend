@@ -193,8 +193,10 @@ div.image-container img {
   }
 
   header {
+    margin: auto;
     margin-bottom: 8rem;
     justify-content: flex-start;
+    max-width: 1407px;
   }
 
   header > img {
@@ -328,6 +330,7 @@ div.image-container img {
     flex-direction: row-reverse;
     margin: auto;
     width: 80%;
+    max-width: 1127px;
     height: 50vh;
   }
 
