@@ -288,9 +288,14 @@ div.image-container img {
     display: block;
   }
 
-  li#features:hover img,
-  li#company:hover img {
+  li#features:hover svg,
+  li#company:hover svg {
     transform: rotate(180deg);
+  }
+
+  li#features:hover path,
+  li#company:hover path {
+    stroke: var(--Almost-Black);
   }
 
   li#company li {
