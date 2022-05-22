@@ -1,0 +1,188 @@
+:root {
+  /* Light scheme colors*/
+  --light-primary-bkgd: hsl(227, 100%, 98%);
+  --light-seconday-bkgd: hsl(0, 0%, 100%);
+  --light-primary-copy: hsl(217, 20%, 51%);
+  --light-secondary-copy: hsl(217, 35%, 45%);
+  --light-header-copy: hsl(217, 21%, 21%);
+  --light-btn-at: hsl(212, 100%, 50%);
+  /* Dark scheme colors*/
+  --dark-primary-bkgd: hsl(220, 40%, 13%);
+  --dark-secondary-bkgd: hsl(222, 41%, 20%);
+  --dark-btn-at: hsl(212, 100%, 50%);
+  --dark-copy: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Space Mono";
+}
+
+main {
+  height: 100vh;
+  padding: 3rem 1rem 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+header > p {
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+
+div.theme-selector {
+  display: flex;
+  align-items: center;
+}
+
+div.theme-selector > span {
+  margin-right: 1rem;
+  font-size: 0.813rem;
+  letter-spacing: 0.156rem;
+  text-transform: uppercase;
+}
+
+div.search-section {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: none;
+  border-radius: 0.938rem;
+  padding: 1.5rem 0 1.5rem 3.5rem;
+  font-family: "Space Mono";
+  background-image: url(./assets/icon-search.svg);
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+}
+
+input::placeholder {
+  color: var(--dark-copy);
+  font-size: 0.813rem;
+  font-weight: 400;
+}
+
+input[type="submit"] {
+  position: absolute;
+  left: 73%;
+  bottom: 12%;
+  background-color: var(--dark-btn-at);
+  color: var(--dark-copy);
+  font-family: "Space Mono";
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.625rem;
+  padding: 1rem;
+}
+
+/* User Section data */
+section {
+  border-radius: 0.938rem;
+  padding: 2rem;
+}
+
+div.top-section {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+img#avatar {
+  margin-right: 1rem;
+  width: 25%;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 0.813rem;
+  font-weight: 400;
+  color: hsl(212, 100%, 50%);
+}
+
+p.date-joined {
+  font-size: 0.813rem;
+  font-weight: 400;
+}
+
+p.bio {
+  margin-bottom: 2rem;
+  font-size: 0.813rem;
+  font-weight: 400;
+  line-height: 1.92;
+}
+
+/* Middle section/stats section */
+div.mid-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  border-radius: 0.625rem;
+}
+
+div.user-stat-section {
+  padding: 0.5rem;
+}
+
+p.user-stat-title {
+  font-size: 0.688rem;
+  margin-bottom: 0.5rem;
+}
+
+p.user-stat {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Bottom section */
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+li p {
+  font-size: 0.813rem;
+}
+
+svg {
+  margin-right: 1rem;
+}
+
+/* Utility classes */
+.dark-primary-bkgd {
+  background-color: var(--dark-primary-bkgd);
+}
+
+.dark-secondary-bkgd {
+  background-color: var(--dark-secondary-bkgd);
+}
+
+.dark-copy {
+  color: var(--dark-copy);
+}
