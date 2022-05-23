@@ -186,3 +186,7 @@ svg {
 .dark-copy {
   color: var(--dark-copy);
 }
+
+.dark-svg {
+  fill: var(--dark-copy);
+}

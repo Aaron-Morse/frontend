@@ -34,16 +34,39 @@ async function getUser(username) {
         repos.textContent = data.public_repos;
         followers.textContent = data.followers;
         following.textContent = data.following;
-        city.textContent = data.location;
-        website.textContent = data.blog;
-        twitter.textContent = data.twitter_username;
-        company.textContent = data.company;
+    }
+
+    function updateLinks(data) {
+        if (data.location) {
+            city.textContent = data.location;
+        } else {
+            city.textContent = 'Not Available';
+        }
+
+        if (data.blog) {
+            website.textContent = data.blog;
+        } else {
+            website.textContent = 'Not Available';
+        }
+
+        if (data.twitter_username) {
+            twitter.textContent = data.twitter_username;
+        } else {
+            twitter.textContent = 'Not Available';
+        }
+
+        if (data.company) {
+            company.textContent = data.company;
+        } else {
+            company.textContent = 'Not Available';
+        }
     }
 
     try {
         let res = await fetch(url);
         let data = await res.json();
         updateDOM(data);
+        updateLinks(data);
     } catch(error) {
         console.log(error);
     }
@@ -52,6 +75,10 @@ async function getUser(username) {
 // Event listeners
 submit.addEventListener('click', () => {
     getUser(search.value);
+});
+
+search.addEventListener('keyup', () => { // Toggles the disabled attribute on/off for the submit button based on search value
+    search.value ? submit.removeAttribute('disabled') : submit.setAttribute('disabled', 'true');
 });
 
 getUser('octocat'); // Initial invocation of getuser() which allows the page to not be blank
