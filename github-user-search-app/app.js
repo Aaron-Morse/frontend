@@ -39,29 +39,45 @@ async function getUser(username) {
     function updateLinks(data) {
         if (data.location) {
             city.textContent = data.location;
+            city.style.opacity = '1';
+            city.previousElementSibling.style.opacity = '1';
         } else {
             city.textContent = 'Not Available';
+            city.style.opacity = '.5';
+            city.previousElementSibling.style.opacity = '.5';
         }
 
         if (data.blog) {
             website.textContent = data.blog;
+            website.style.opacity = '1';
+            website.previousElementSibling.style.opacity = '1';
         } else {
             website.textContent = 'Not Available';
+            website.style.opacity = '.5';
+            website.previousElementSibling.style.opacity = '.5';
         }
 
         if (data.twitter_username) {
             twitter.textContent = data.twitter_username;
+            twitter.style.opacity = '1';
+            twitter.previousElementSibling.style.opacity = '1';
         } else {
             twitter.textContent = 'Not Available';
+            twitter.style.opacity = '.5';
+            twitter.previousElementSibling.style.opacity = '.5';
         }
 
         if (data.company) {
             company.textContent = data.company;
+            company.style.opacity = '1';
+            company.previousElementSibling.style.opacity = '1';
         } else {
             company.textContent = 'Not Available';
+            company.style.opacity = '.5';
+            company.previousElementSibling.style.opacity = '.5';
         }
     }
-
+    
     try {
         let res = await fetch(url);
         let data = await res.json();
