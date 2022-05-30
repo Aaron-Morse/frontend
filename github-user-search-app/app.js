@@ -9,15 +9,10 @@ const bio = document.querySelector('.bio');
 const repos = document.querySelector('.repos');
 const followers = document.querySelector('.followers');
 const following = document.querySelector('.following');
-const city = document.querySelector('.city p');
-const website = document.querySelector('.website p');
-const twitter = document.querySelector('.twitter p');
-const company = document.querySelector('.company p');
 const placeholderBioCopy = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.';
 
 // Functions
 async function getUser(username) {
-    let url = `https://api.github.com/users/${username}`;
 
     function formatDate(date) {
         const dateArr = date.slice(0, 10).split('-'); //dateArr format is year, month, day
@@ -35,57 +30,35 @@ async function getUser(username) {
         followers.textContent = data.followers;
         following.textContent = data.following;
     }
-
-    function updateLinks(data) {
-        if (data.location) {
-            city.textContent = data.location;
-            city.style.opacity = '1';
-            city.previousElementSibling.style.opacity = '1';
-        } else {
-            city.textContent = 'Not Available';
-            city.style.opacity = '.5';
-            city.previousElementSibling.style.opacity = '.5';
-        }
-
-        if (data.blog) {
-            website.textContent = data.blog;
-            website.style.opacity = '1';
-            website.previousElementSibling.style.opacity = '1';
-        } else {
-            website.textContent = 'Not Available';
-            website.style.opacity = '.5';
-            website.previousElementSibling.style.opacity = '.5';
-        }
-
-        if (data.twitter_username) {
-            twitter.textContent = data.twitter_username;
-            twitter.style.opacity = '1';
-            twitter.previousElementSibling.style.opacity = '1';
-        } else {
-            twitter.textContent = 'Not Available';
-            twitter.style.opacity = '.5';
-            twitter.previousElementSibling.style.opacity = '.5';
-        }
-
-        if (data.company) {
-            company.textContent = data.company;
-            company.style.opacity = '1';
-            company.previousElementSibling.style.opacity = '1';
-        } else {
-            company.textContent = 'Not Available';
-            company.style.opacity = '.5';
-            company.previousElementSibling.style.opacity = '.5';
-        }
-    }
     
+    function updateLinks(data) {
+        const links = document.querySelectorAll('[data-json]');
+        links.forEach(link => {
+            if (data[link.dataset.json]) {
+                link.textContent = data[link.dataset.json];
+                link.style.opacity = '1';
+                link.previousElementSibling.style.opacity = '1';
+            } else {
+                link.textContent = 'Not Available';
+                link.style.opacity = '.5';
+                link.previousElementSibling.style.opacity = '.5';
+            }
+        });
+    }
+
     try {
-        let res = await fetch(url);
-        let data = await res.json();
-        updateDOM(data);
-        updateLinks(data);
+        const url = `https://api.github.com/users/${username}`;
+        const res = await fetch(url);
+        console.log(res);
+        if (res.ok) {
+            const data = await res.json();
+            updateDOM(data);
+            updateLinks(data);
+        }
     } catch(error) {
         console.log(error);
     }
+
 }
 
 // Event listeners
@@ -98,4 +71,5 @@ search.addEventListener('keyup', () => { // Toggles the disabled attribute on/of
 });
 
 getUser('octocat'); // Initial invocation of getuser() which allows the page to not be blank
+
 
