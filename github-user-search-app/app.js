@@ -65,6 +65,12 @@ submit.addEventListener('click', () => {
     getUser(search.value);
 });
 
+search.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        getUser(search.value);
+    }
+});
+
 search.addEventListener('keyup', () => { // Toggles the disabled attribute on/off for the submit button based on search value
     if (search.value) {
         submit.removeAttribute('disabled');
