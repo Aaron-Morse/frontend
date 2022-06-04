@@ -46,7 +46,6 @@ async function getUser(username) {
         });
     }
 
-    try {
         const url = `https://api.github.com/users/${username}`;
         const res = await fetch(url);
         console.log(res);
@@ -54,10 +53,10 @@ async function getUser(username) {
             const data = await res.json();
             updateDOM(data);
             updateLinks(data);
+            document.querySelector('#warning').style.display = 'none';
+        } else {
+            document.querySelector('#warning').style.display = 'block';
         }
-    } catch(error) {
-        console.log(error);
-    }
 
 }
 
@@ -67,9 +66,14 @@ submit.addEventListener('click', () => {
 });
 
 search.addEventListener('keyup', () => { // Toggles the disabled attribute on/off for the submit button based on search value
-    search.value ? submit.removeAttribute('disabled') : submit.setAttribute('disabled', 'true');
+    if (search.value) {
+        submit.removeAttribute('disabled');
+    } else {
+        document.querySelector('#warning').style.display = 'none';
+        submit.setAttribute('disabled', 'true');
+    }
 });
 
-getUser('octocat'); // Initial invocation of getuser() which allows the page to not be blank
+getUser('octocat'); // Initial invocation of getuser() to populate the page
 
 

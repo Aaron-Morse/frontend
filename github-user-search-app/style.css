@@ -92,6 +92,12 @@ input[type="submit"] {
 
 p#warning {
   display: none;
+  color: red;
+  font-size: 0.75rem;
+  font-weight: 700;
+  position: absolute;
+  left: 48%;
+  bottom: 35%;
 }
 
 /* User Section data */
