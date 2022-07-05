@@ -51,34 +51,21 @@ const users = {
 
 const urlParam = new URLSearchParams(location.search);
 const user = users[urlParam.get('user')] || users.user1;
-const displayNames = document.querySelectorAll('.display-name');
-const tweetCount = document.querySelector('.tweet-count');
-const coverPhoto = document.querySelector('.cover-photo');
-const userAvatar = document.querySelector('.user-avatar');
-const userName = document.querySelector('.user-name');
-const dateJoined = document.querySelector('.date-joined');
-const following = document.querySelector('.following');
-const followers = document.querySelector('.followers');
 const tweetsSection = document.querySelector('.tweets-section');
-const tweetAvatar = document.querySelector('.tweet-avatar');
-const tweetDisplayName = document.querySelector('.tweet-display-name');
-const tweetUserName = document.querySelector('.tweet-user-name');
-const tweetDate = document.querySelector('.tweet-date');
-const tweetText = document.querySelector('.tweet-text');
 
-function updateUser(user) {
+function renderUser(user) {
     // .header container content
     // This selector loops through both displayName locations and updates
-    displayNames.forEach(name => name.textContent = user.displayName);
-    tweetCount.textContent = `${user.tweets.length} Tweets`;
+    document.querySelectorAll('.display-name').forEach(name => name.textContent = user.displayName);
+    document.querySelector('.tweet-count').textContent = `${user.tweets.length} Tweets`;
     // .cover-photo container content
-    coverPhoto.style.backgroundImage = `url(${user.coverPhotoURL})`;
+    document.querySelector('.cover-photo').style.backgroundImage = `url(${user.coverPhotoURL})`;
     // .profile-details section
-    userAvatar.src = user.avatarURL;
-    userName.textContent = user.userName;
-    dateJoined.textContent = `Joined ${user.joinedDate}`;
-    following.textContent = user.followingCount;
-    followers.textContent = `${(user.followerCount/1000000)}M`;
+    document.querySelector('.user-avatar').src = user.avatarURL;
+    document.querySelector('.user-name').textContent = user.userName;
+    document.querySelector('.date-joined').textContent = `Joined ${user.joinedDate}`;
+    document.querySelector('.following').textContent = user.followingCount;
+    document.querySelector('.followers').textContent = `${(user.followerCount/1000000)}M`;
     // .tweets content
     user.tweets.forEach(userTweet => {
         const tweet = document.createElement('div');
@@ -102,7 +89,7 @@ function updateUser(user) {
     });
 }
 
-updateUser(user);
+renderUser(user);
 
 
 
