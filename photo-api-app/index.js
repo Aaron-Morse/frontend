@@ -1,17 +1,16 @@
 const searchForm = document.querySelector('#search-form');
+const searchBarText = document.querySelector('#search-bar');
 
 async function fetchPhotos() {
-    const searchBarText = document.querySelector('#search-bar').value;
-    const res = await fetch(`https://api.pexels.com/v1/search?query=${searchBarText}`, {
+    const request = new Request(`https://api.pexels.com/v1/search?query=${searchBarText.value}`, {
         method: 'GET',
         headers: {
             Authorization: '563492ad6f91700001000001635f6558d3a6429fab8811e051cd7714'
         }
     });
-    const data = await res.json();
-    console.log(data);
+    const response = await fetch(request);
+    const data = await response.json();
     const photos = data.photos;
-    console.log(photos)
     const photosContainer = document.querySelector('.photos-container');
     photosContainer.innerHTML = '';
     photos.forEach(photo => {
@@ -23,9 +22,11 @@ async function fetchPhotos() {
 }
 
 searchForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    fetchPhotos();
+        e.preventDefault();
+        fetchPhotos();
 });
+
+
 
 
 
