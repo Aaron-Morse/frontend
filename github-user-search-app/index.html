@@ -27,7 +27,7 @@
           </svg>
         </div>
       </header>
-      <div class="search-section">
+      <form id="api" class="dark-secondary-bkgd">
         <input
           class="dark-secondary-bkgd dark-copy"
           type="text"
@@ -35,9 +35,9 @@
           id="search"
           placeholder="Search GitHub username&hellip;"
         />
-        <input type="submit" value="Search" disabled />
+        <input for="api" id="submit" type="submit" value="Search" disabled />
         <p id="warning">No results</p>
-      </div>
+      </form>
       <section class="dark-secondary-bkgd">
         <div class="top-section">
           <img id="avatar" src="" alt="" />

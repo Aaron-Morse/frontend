@@ -1,14 +1,7 @@
 // Variables and page elements
+const form = document.querySelector('form');
 const search = document.querySelector('input[type="text"]');
 const submit = document.querySelector('input[type="submit"]');
-const avatar = document.querySelector('#avatar');
-const h1 = document.querySelector('h1');
-const h3 = document.querySelector('h3');
-const dateJoined = document.querySelector('p.date-joined');
-const bio = document.querySelector('.bio');
-const repos = document.querySelector('.repos');
-const followers = document.querySelector('.followers');
-const following = document.querySelector('.following');
 const placeholderBioCopy = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.';
 
 // Functions
@@ -21,14 +14,14 @@ async function getUser(username) {
     }
 
     function updateDOM(data) {
-        avatar.src = data.avatar_url;
-        h1.textContent = data.name;
-        h3.textContent = `@${data.login}`;
-        dateJoined.textContent = formatDate(data.created_at);
-        bio.textContent = bio.data ? bio.data : placeholderBioCopy;
-        repos.textContent = data.public_repos;
-        followers.textContent = data.followers;
-        following.textContent = data.following;
+        document.getElementById('avatar').src = data.avatar_url;
+        document.querySelector('h1').textContent = data.name;
+        document.querySelector('h3').textContent = `@${data.login}`;
+        document.querySelector('.date-joined').textContent = formatDate(data.created_at);
+        document.querySelector('.bio').textContent = data.bio ? data.bio : placeholderBioCopy;
+        document.querySelector('.repos').textContent = data.public_repos;
+        document.querySelector('.followers').textContent = data.followers;
+        document.querySelector('.following').textContent = data.following;
     }
     
     function updateLinks(data) {
@@ -48,7 +41,6 @@ async function getUser(username) {
 
         const url = `https://api.github.com/users/${username}`;
         const res = await fetch(url);
-        console.log(res);
         if (res.ok) {
             const data = await res.json();
             updateDOM(data);
@@ -61,14 +53,9 @@ async function getUser(username) {
 }
 
 // Event listeners
-submit.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
     getUser(search.value);
-});
-
-search.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        getUser(search.value);
-    }
 });
 
 search.addEventListener('keyup', () => { // Toggles the disabled attribute on/off for the submit button based on search value
