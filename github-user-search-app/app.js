@@ -5,7 +5,7 @@ const submit = document.querySelector('input[type="submit"]');
 const placeholderBioCopy = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.';
 
 // Functions
-async function getUser(username) {
+async function renderUser(username) {
 
     function formatDate(date) {
         const dateArr = date.slice(0, 10).split('-'); //dateArr format is year, month, day
@@ -49,13 +49,12 @@ async function getUser(username) {
         } else {
             document.querySelector('#warning').style.display = 'block';
         }
-
 }
 
 // Event listeners
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    getUser(search.value);
+    renderUser(search.value);
 });
 
 search.addEventListener('keyup', () => { // Toggles the disabled attribute on/off for the submit button based on search value
@@ -67,6 +66,6 @@ search.addEventListener('keyup', () => { // Toggles the disabled attribute on/of
     }
 });
 
-getUser('octocat'); // Initial invocation of getuser() to populate the page
+renderUser('octocat'); // Initial invocation of renderUser() to populate the page
 
 
