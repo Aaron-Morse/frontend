@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Kumbh Sans";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
+}
+
+main {
+  width: 100%;
+  margin: 0 1.5rem;
+  padding: 8.25rem 1.5rem 3rem;
+  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+  border-radius: 1.438rem;
+  background-color: #fff;
+  background-image: url(./images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+main::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 180px;
+  margin-top: -200px;
+  background: url("./images/illustration-woman-online-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  margin-bottom: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+div {
+  padding: 1.188rem 0;
+  border-bottom: 1px solid #e8e8ea;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+div:hover h6 {
+  font-weight: 700;
+  color: #1e1f36;
+  transition: 0.3s ease all;
+}
+
+div:hover h6::after {
+  transform: rotate(180deg);
+}
+
+div:hover p {
+  display: block;
+}
+
+h6 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.813rem;
+  line-height: 1.23;
+  font-weight: 400;
+  color: #4b4c5f;
+}
+
+h6::after {
+  content: url(./images/icon-arrow-down.svg);
+}
+
+p {
+  display: none;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #787887;
+}
+
+.mobile-images {
+  margin-top: -90%;
+  position: relative;
+}
+
+#mobile-main-image {
+  transform: scale(0.8);
+  position: relative;
+  z-index: 1;
+}
+
+#mobile-secondary-image {
+  position: absolute;
+  top: 55%;
+  left: 6%;
+  transform: scale(0.95);
+}
+
+.desktop-images {
+  display: none;
+}
