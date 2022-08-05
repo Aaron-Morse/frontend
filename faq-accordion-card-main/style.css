@@ -54,25 +54,26 @@ h1 {
 div {
   padding: 1.188rem 0 1.125rem;
   border-bottom: 1px solid #e8e8ea;
-  cursor: pointer;
-  transition: 0.3s ease all;
 }
 
-div:hover h6 {
-  font-weight: 700;
-  color: #1e1f36;
-  transition: 0.3s ease all;
+input {
+  display: none;
 }
 
-div:hover h6::after {
-  transform: rotate(180deg);
-}
-
-div:hover p {
+input:checked ~ p {
   display: block;
 }
 
-h6 {
+input:checked ~ label {
+  font-weight: 700;
+  color: #1e1f36;
+}
+
+input:checked ~ label::after {
+  transform: rotate(180deg);
+}
+
+label {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,10 +81,15 @@ h6 {
   line-height: 1.23;
   font-weight: 400;
   color: #4b4c5f;
+  cursor: pointer;
 }
 
-h6::after {
+label::after {
   content: url(./images/icon-arrow-down.svg);
+}
+
+label:hover {
+  color: #f47b56;
 }
 
 p {
@@ -99,12 +105,13 @@ p {
 @media only screen and (min-width: 992px) {
   main {
     width: 920px;
+    height: 470px;
     display: flex;
     justify-content: flex-end;
     padding: 0;
     background-image: url(./images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
-    background-position: -20% 0;
+    background-position-x: -20%;
     background-size: contain;
   }
 
@@ -114,9 +121,9 @@ p {
     margin-top: 50px;
     width: 472px;
     height: 359px;
-    background: url("./images/illustration-woman-online-desktop.svg");
+    background-image: url("./images/illustration-woman-online-desktop.svg");
     background-repeat: no-repeat;
-    background-position: -80px 0;
+    background-position-x: -80px;
   }
 
   section {
