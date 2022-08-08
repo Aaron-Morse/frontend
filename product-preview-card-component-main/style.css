@@ -6,7 +6,7 @@
   --Very-dark-blue: hsl(212, 21%, 14%);
   --Dark-grayish-blue: hsl(228, 12%, 48%);
   --White: hsl(0, 0%, 100%);
-  --Deep-aquamarine: hsl(157, 36%, 37%, 1);
+  --Deep-aquamarine: hsl(157, 36%, 37%);
 }
 
 * {
@@ -58,6 +58,7 @@ h2 {
 h1 {
   font-family: Fraunces;
   font-size: 32px;
+  font-weight: 700;
   line-height: 1;
   color: var(--Very-dark-blue);
   margin-bottom: 16px;
@@ -143,5 +144,10 @@ button::before {
 
   .price-text {
     margin-bottom: 24px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #1a4032;
   }
 }
