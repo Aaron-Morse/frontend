@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Parallax Scroll</title>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li class="scroll" data-rate="-2" data-direction="vertical">par</li>
+        <li>all</li>
+        <li class="scroll" data-rate="2" data-direction="vertical">ax</li>
+      </ul>
+      <span class="scroll" data-rateY="-.5" data-rateX="2" data-direction="horizontal"></span></span>
+    </section>
+    <section></section>
+    <script>
+      window.addEventListener("scroll", (e) => {
+        const target = document.querySelectorAll(".scroll");
+        for (let i = 0; i < target.length; i++) {
+          const pos = window.pageYOffset * target[i].dataset.rate;
+          if (target[i].dataset.direction === 'vertical') {
+            target[i].style.transform = `translate3d(0, ${pos}px, 0)`;
+          } else {
+              const posX = window.pageYOffset * target[i].dataset.ratex;
+              const posY = window.pageYOffset * target[i].dataset.ratey;
+            target[i].style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
