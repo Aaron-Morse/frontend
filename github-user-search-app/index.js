@@ -45,10 +45,12 @@ async function renderUser(username = 'octocat') {
     const res = await fetch(url);
     const data = await res.json();
     if (res.ok) {
+        document.getElementById('warning').style.display = 'none';
         updateUserDetails();
         updateUserStats();
         updateLinks();
     } else {
+        document.getElementById('warning').style.display = 'block';
     }
 }
 
@@ -77,6 +79,12 @@ document.querySelector('form').addEventListener('submit', (e) => {
     const username = document.querySelector('input').value;
     renderUser(username);
 });
+
+document.querySelector('input').addEventListener('keyup', (e) => {
+    if (e.target.value === '') {
+        document.getElementById('warning').style.display = 'none';
+    }
+})
 
 document.addEventListener('DOMContentLoaded', () => {
     renderUser();
