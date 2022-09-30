@@ -1,6 +1,5 @@
 // Variables
-const themeSelector =   document.querySelector('.theme-selector')
-const themeImg = document.querySelector('.theme-selector img');
+const themeSelector = document.querySelector('.theme-selector')
 
 // Functions
 async function renderUser(username = 'octocat') {
