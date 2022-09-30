@@ -217,11 +217,14 @@ li {
     align-items: center;
 }
 
+li svg {
+    width: 2rem;
+}
+
 li span {
     font-size: 0.813rem;
     font-weight: 400;
     color: var(--main-text);
-    margin-left: .75rem;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -331,6 +334,10 @@ li span {
         display: flex;
         align-items: center;
         height: 50%;
+    }
+
+    li svg {
+        width: 1.5rem;
     }
 
     li span {
