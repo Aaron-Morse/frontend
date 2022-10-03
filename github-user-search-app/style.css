@@ -227,6 +227,8 @@ li span {
     font-size: 0.813rem;
     font-weight: 400;
     color: var(--main-text);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -382,6 +384,10 @@ li span {
     }
 
     /* User details section */
+
+    .user-details {
+        margin-bottom: 0;
+    }
 
     .user {
         display: flex;
