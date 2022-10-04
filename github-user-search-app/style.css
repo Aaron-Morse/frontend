@@ -124,7 +124,7 @@ button {
 
 p#warning {
   font-size: 0.688rem;
-  font-weight: 400;
+  font-weight: 700;
   color: red;
   position: absolute;
   right: 30%;
@@ -264,6 +264,11 @@ li span {
     padding: 0.781rem 1.5rem;
   }
 
+  p#warning {
+    font-size: 0.938rem;
+    right: 25%;
+  }
+
   /* Content section */
 
   section {
@@ -377,6 +382,12 @@ li span {
   button:hover {
     background-color: #60abff;
   }
+
+  p#warning {
+    right: 20%;
+  }
+
+  /* Content section */
 
   section {
     padding: 3rem;
