@@ -9,8 +9,6 @@ async function renderUser(username = 'octocat') {
         const year = date[0];
         const month = Intl.DateTimeFormat('en', { month: 'short' }).format(new Date(date[1]));
         const day = date[2];
-        const loremIpsum = `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-        Quisque volutpat mattis eros.`;
         document.querySelector('.user-details img').src = data.avatar_url;
         document.querySelector('h2').textContent = data.name;
         document.querySelector('h3').textContent = `@${data.login}`;
