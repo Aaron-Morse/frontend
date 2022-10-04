@@ -84,9 +84,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
 });
 
 document.querySelector('input').addEventListener('keyup', (e) => {
-    if (e.target.value === '') {
-        document.getElementById('warning').style.display = 'none';
-    }
+    document.getElementById('warning').style.display = 'none';
 })
 
 document.addEventListener('DOMContentLoaded', () => {
