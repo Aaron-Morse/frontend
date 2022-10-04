@@ -15,7 +15,13 @@ async function renderUser(username = 'octocat') {
         document.querySelector('h2').textContent = data.name;
         document.querySelector('h3').textContent = `@${data.login}`;
         document.querySelector('.date-joined').textContent = `Joined ${day} ${month} ${year}`;
-        document.querySelector('.bio').textContent = data.bio || loremIpsum;
+        if (data.bio) {
+            document.querySelector('.bio').textContent = data.bio;
+            document.querySelector('.bio').style.opacity = 1;
+        } else {
+            document.querySelector('.bio').textContent = 'This profile has no bio';
+            document.querySelector('.bio').style.opacity = .5;
+        }
     }
 
     function updateUserStats() {
