@@ -76,7 +76,13 @@ function updateTheme() {
     }
 }
 
+renderUser();
+themeSelector.querySelectorAll('svg')[1].style.display = 'block';
+
 // Event listeners
+
+themeSelector.addEventListener('click', updateTheme);
+
 document.querySelector('form').addEventListener('submit', (e) => {
     e.preventDefault();
     const username = document.querySelector('input').value;
@@ -86,10 +92,3 @@ document.querySelector('form').addEventListener('submit', (e) => {
 document.querySelector('input').addEventListener('keyup', (e) => {
     document.getElementById('warning').style.display = 'none';
 })
-
-document.addEventListener('DOMContentLoaded', () => {
-    renderUser();
-    // Displays the moon svg on load
-    themeSelector.querySelector('svg').style.display = 'block';
-    themeSelector.addEventListener('click', updateTheme);
-});
