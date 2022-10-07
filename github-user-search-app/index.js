@@ -1,5 +1,6 @@
 // Variables
 const themeSelector = document.querySelector('.theme-selector')
+themeSelector.querySelectorAll('svg')[1].style.display = 'block';
 
 // Functions
 async function renderUser(username = 'octocat') {
@@ -47,6 +48,7 @@ async function renderUser(username = 'octocat') {
     const url = `https://api.github.com/users/${username}`;
     const res = await fetch(url);
     const data = await res.json();
+    console.log(data);
     if (res.ok) {
         document.getElementById('warning').style.display = 'none';
         updateUserDetails();
@@ -75,9 +77,6 @@ function updateTheme() {
         moonSVG.style.display = 'none';
     }
 }
-
-renderUser();
-themeSelector.querySelectorAll('svg')[1].style.display = 'block';
 
 // Event listeners
 
