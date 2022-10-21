@@ -5,7 +5,7 @@ themeSelector.querySelectorAll('svg')[1].style.display = 'block';
 // Functions
 async function renderUser(username = 'octocat') {
 
-    function updateUserDetails() {
+    function updateUserDetails(data) {
         const date = data.created_at.slice(0, 10).split('-');
         const year = date[0];
         const month = Intl.DateTimeFormat('en', { month: 'short' }).format(new Date(date[1]));
@@ -23,13 +23,13 @@ async function renderUser(username = 'octocat') {
         }
     }
 
-    function updateUserStats() {
+    function updateUserStats(data) {
         document.querySelector('.repos').textContent = data.public_repos;
         document.querySelector('.followers').textContent = data.followers;
         document.querySelector('.following').textContent = data.following;
     }
 
-    function updateLinks() {
+    function updateLinks(data) {
         const linksData = [data.location, data.blog, data.twitter_username, data.company];
         const links = document.querySelectorAll('li span');
         for (let i = 0; i < linksData.length; i++) {
@@ -44,17 +44,19 @@ async function renderUser(username = 'octocat') {
             }
         }
     }
-
-    const url = `https://api.github.com/users/${username}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    console.log(data);
-    if (res.ok) {
-        document.getElementById('warning').style.display = 'none';
-        updateUserDetails();
-        updateUserStats();
-        updateLinks();
-    } else {
+    
+    try {
+        const url = `https://api.github.com/users/${username}`;
+        const res = await fetch(url);
+        const data = await res.json();
+        if (res.ok) {
+            document.getElementById('warning').style.display = 'none';
+            updateUserDetails(data);
+            updateUserStats(data);
+            updateLinks(data);
+        }
+    } catch (err) {
+        console.log('Error', err);
         document.getElementById('warning').style.display = 'block';
     }
 }
